@@ -1,0 +1,2 @@
+You can get file hg38.fa from:
+https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.fa.gz
