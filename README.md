@@ -54,3 +54,6 @@ sudo apt install g++
 sudo apt-get install zlib1g-dev
 sudo apt-get install -y libboost-filesystem-dev
 ```
+
+If an error is encountered: "**./API/AMGC18 Instruction not found**", you can use "**chmod +x ./API/AMGC18**" to give executable permissions to the file.
+
