@@ -41,8 +41,11 @@ rm -f SRR6691666_1_50MB.fastq
 
 ## Tips 
 We recommend running AMGC with ubuntu version 20.04. 
+
 ./API/AMGC18 is for ubuntu18.04 .2(with shared libraries: libboost_system.so.1.65.1)
+
 ./API/AMGC20 is for ubuntu20.04.6 (with shared libraries: libboost_system.so.1.71.0)
+
 ./API/AMGC22 is for ubuntu22.04.2 (with shared libraries: libboost_system.so.1.74.0)
 
 The instructions below could be helpful may be helpful
