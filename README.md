@@ -60,3 +60,5 @@ sudo apt-get install -y libboost-filesystem-dev
 
 If an error is encountered: "**./API/AMGC18 Instruction not found**", you can use "**chmod +x ./API/AMGC18**" to give executable permissions to the file.
 
+CPU type in the compilation environment: **11th Gen Intel(R) Core(TM) i7-11700F @ 2.50GHz**
+
