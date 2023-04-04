@@ -6,7 +6,7 @@ Jia Wang<sup>1</sup>,  [Yi Niu](https://web.xidian.edu.cn/niuyi/)<sup>1,2</sup>,
 
 <sup>1</sup>Xidian University, <sup>2</sup>Pengcheng Laboratory
 
-[[Preprint](https://arxiv.org/abs/2304.01031)] | [[code](https://github.com/wj-inf/AMGC)]
+[[preprint](https://arxiv.org/abs/2304.01031)] | [[code](https://github.com/wj-inf/AMGC)]
 
 > **Motivation**: Despite significant advances in Third-Generation Sequencing (TGS) technologies, Next-Generation Sequencing (NGS) technologies remain dominant in the current sequencing market. This is due to the lower error rates and richer analytical software of NGS than that of TGS. NGS technologies generate vast amounts of genomic data including short reads, quality values and read identifiers. As a result, efficient compression of such data has become a pressing need, leading to extensive research efforts focused on designing FASTQ compressors. Previous researches show that lossless compression of quality values seems to reach its limits. But there remain lots of room for the compression of the reads part. 
 >
@@ -21,7 +21,7 @@ Jia Wang<sup>1</sup>,  [Yi Niu](https://web.xidian.edu.cn/niuyi/)<sup>1,2</sup>,
 
 We conducted experiments on ten data, including five Homo sapiens, three Mus musculus and two Arabidopsis thaliana.
 
-| reference data                              | Species              | Source                                                       |
+| Reference data                              | Species              | Source                                                       |
 | ------------------------------------------- | -------------------- | ------------------------------------------------------------ |
 | hg38.fa                                     | Homo sapiens         | [Link](https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.fa.gz) |
 | Mus_musculus.GRCm39.dna.toplevel.fa         | Mus musculus         | [Link](https://ftp.ensembl.org/pub/release-108/fasta/mus_musculus/dna/Mus_musculus.GRCm39.dna.toplevel.fa.gz) |
@@ -42,7 +42,7 @@ We conducted experiments on ten data, including five Homo sapiens, three Mus mus
 | SRR6240776   | 8.5 GB        | Arabidopsis thaliana | ATAC-Seq   | ATAC-Seq Illumina HiSeq 4000       | PE+SE | 50, 50      |
 | SRR6240776_1 | 14.9 GB       |                      |            |                                    |       |             |
 
-All these test data could be downloaded from [NCBI](https://www.ncbi.nlm.nih.gov/). You can take this [Link]([SRR4017489 : Run Browser : SRA Archive : NCBI (nih.gov)](https://trace.ncbi.nlm.nih.gov/Traces/?view=run_browser&acc=SRR4017489&display=download)) as an example.
+All these test data could be downloaded from [NCBI](https://www.ncbi.nlm.nih.gov/). You can take this [Link](https://trace.ncbi.nlm.nih.gov/Traces/?view=run_browser&acc=SRR4017489&display=download) as an example.
 
 We also offer tiny test data for test: `./testdata/SRR6691666_1_50M.fastq`. The corresponding reference fasta file could be downloaded from [hg38.fa](https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.fa.gz). You need to download it before the test.
 
