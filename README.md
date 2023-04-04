@@ -29,18 +29,18 @@ We conducted experiments on ten data, including five Homo sapiens, three Mus mus
 
 
 
-| Test data    | Original size | Species name         | Technology | Platform                           | Read length |
-| ------------ | ------------- | -------------------- | ---------- | ---------------------------------- | ----------- |
-| SRR4017489_1 | 16.5 GB       | Homo sapiens         | WCS        | Illumina HiSeq 2000                | 101,101     |
-| SRR6691666_1 | 316.1 GB      | Homo sapiens         | WGS        | TruSeq + Illumina HiSeq X          | 151,151     |
-| ERR753370_1  | 12.7 GB       | Homo sapiens         | FINISHING  | Illumina HiScanSQ                  | 101,101     |
-| SRR1238539   | 74.2 GB       | Homo sapiens         | WGS        | Ion Torrent Proton                 | 177         |
-| SRR6178157   | 37.0 GB       | Homo sapiens         | WXS        | Ion Torrent Proton                 | 135         |
-| SRR3479107   | 5.9 GB        | Mus musculus         | MBD-Seq    | MBD-Seq AB 5500xl Genetic Analyzer | 30,30       |
-| SRR3479107_1 | 21.9 GB       |                      |            |                                    |             |
-| SRR5572323   | 29.8 GB       | Mus musculus         | FAIRE-seq  | FAIRE-seq Illumina HiSeq 2000      | 76          |
-| SRR6240776   | 8.5 GB        | Arabidopsis thaliana | ATAC-Seq   | ATAC-Seq Illumina HiSeq 4000       | 50, 50      |
-| SRR6240776_1 | 14.9 GB       |                      |            |                                    |             |
+| Test data    | Original size | Species name         | Technology | Platform                           | SE/PE | Read length |
+| ------------ | ------------- | -------------------- | ---------- | ---------------------------------- | ----- | ----------- |
+| SRR4017489_1 | 16.5 GB       | Homo sapiens         | WCS        | Illumina HiSeq 2000                | PE    | 101,101     |
+| SRR6691666_1 | 316.1 GB      | Homo sapiens         | WGS        | TruSeq + Illumina HiSeq X          | PE    | 151,151     |
+| ERR753370_1  | 12.7 GB       | Homo sapiens         | FINISHING  | Illumina HiScanSQ                  | PE    | 101,101     |
+| SRR1238539   | 74.2 GB       | Homo sapiens         | WGS        | Ion Torrent Proton                 | SE    | 177         |
+| SRR6178157   | 37.0 GB       | Homo sapiens         | WXS        | Ion Torrent Proton                 | SE    | 135         |
+| SRR3479107   | 5.9 GB        | Mus musculus         | MBD-Seq    | MBD-Seq AB 5500xl Genetic Analyzer | PE+SE | 30,30       |
+| SRR3479107_1 | 21.9 GB       |                      |            |                                    |       |             |
+| SRR5572323   | 29.8 GB       | Mus musculus         | FAIRE-seq  | FAIRE-seq Illumina HiSeq 2000      | SE    | 76          |
+| SRR6240776   | 8.5 GB        | Arabidopsis thaliana | ATAC-Seq   | ATAC-Seq Illumina HiSeq 4000       | PE+SE | 50, 50      |
+| SRR6240776_1 | 14.9 GB       |                      |            |                                    |       |             |
 
 All these test data could be downloaded from [NCBI](https://www.ncbi.nlm.nih.gov/). You can take this [Link]([SRR4017489 : Run Browser : SRA Archive : NCBI (nih.gov)](https://trace.ncbi.nlm.nih.gov/Traces/?view=run_browser&acc=SRR4017489&display=download)) as an example.
 
@@ -56,7 +56,9 @@ We also offer tiny test data for test: `./testdata/SRR6691666_1_50M.fastq`. The 
 CPU type: **11th Gen Intel(R) Core(TM) i7-11700F @ 2.50GHz**
 
 `./API/AMGC18` was compiled in ubuntu18.04.2(libboost_system.so.1.65.1)
+
 `./API/AMGC20` was compiled in ubuntu20.04.6 (libboost_system.so.1.71.0)
+
 `./API/AMGC22` was compiled in ubuntu22.04.2 (libboost_system.so.1.74.0)
 
 We recommend running AMGC with ubuntu version 20.04.6. 
