@@ -9,7 +9,9 @@ Jia Wang<sup>1</sup>,  [Yi Niu](https://web.xidian.edu.cn/niuyi/)<sup>1,2</sup>,
 [[Preprint](https://arxiv.org/abs/2304.01031)] | [[code](https://github.com/wj-inf/AMGC)]
 
 > **Motivation**: Despite significant advances in Third-Generation Sequencing (TGS) technologies, Next-Generation Sequencing (NGS) technologies remain dominant in the current sequencing market. This is due to the lower error rates and richer analytical software of NGS than that of TGS. NGS technologies generate vast amounts of genomic data including short reads, quality values and read identifiers. As a result, efficient compression of such data has become a pressing need, leading to extensive research efforts focused on designing FASTQ compressors. Previous researches show that lossless compression of quality values seems to reach its limits. But there remain lots of room for the compression of the reads part. 
+>
 > **Results**: By investigating the characters of the sequencing process, we present a new algorithm for compressing reads in FASTQ files, which can be integrated into various genomic compression tools. We first reviewed the pipeline of reference-based algorithms and identified three key components that heavily impact storage: the matching positions of reads on the reference sequence(refpos), the mismatched positions of bases on reads(mispos) and the matching failed reads(unmapseq). To reduce their sizes, we conducted a detailed analysis of the distribution of matching positions and sequencing errors and then developed the three modules of AMGC. According to the experiment results, AMGC outperformed the current state-of-the-art methods, achieving an 81.23% gain in compression ratio on average compared with the second-best-performing compressor.
+>
 > **Availability**: https://github.com/wj-inf/AMGC
 
 
