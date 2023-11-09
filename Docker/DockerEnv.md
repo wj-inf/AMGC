@@ -40,7 +40,8 @@ sudo docker load -i ./env_image_amgc.tar.gz
 ```
 Create container:
 ```terminal
-sudo docker run --name amgc --shm-size 32g -it -v ../data:/data env_image_amgc /bin/bash 
+cd ../
+sudo docker run --name amgc --shm-size 32g -it -v ./data:/data env_image_amgc /bin/bash 
 ```
 ps: 
 
