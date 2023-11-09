@@ -47,6 +47,11 @@ ps:
 
 1. Our program needs shm to storage processed reference  gene data.(eg: ~9GB shm for hg38.fa ~3GB) 
 2. '../data:/data' stand for '**soure data path**:container data path' likes shared folder.
+3. You may encounter this error: "unexpected EOF". This is caused as you don't download the docker image file correctly. We show three ways to download it:
+
+	* You can download the raw file directly:![AMGC/Docker/env_image_amgc.tar.gz](./tip.jpg)
+ * You can use our OneDrive [link](https://1drv.ms/u/s!AiyNov2MdfiQgVRGq-Ey5727Gau1?e=BX9WIB)
+	* Use **git lfs clone**
 
 Copy api into data dir:
 
