@@ -1,6 +1,6 @@
 # AMGC
 
-API for "Adaptive match-based genomic compression algorithm".
+API for "Adaptive match-based genomic compression algorithm". 
 
 **Jia Wang**<sup>1</sup>,  [Yi Niu](https://web.xidian.edu.cn/niuyi/)<sup>1,2</sup>, Tianyi Xu<sup>1</sup>, Mingming Ma<sup>1</sup>, [Dahua Gao](https://web.xidian.edu.cn/dhgao/)<sup>1</sup> and [Guangming Shi](https://web.xidian.edu.cn/gmshi/)<sup>1,2</sup>
 
@@ -13,6 +13,8 @@ API for "Adaptive match-based genomic compression algorithm".
 > **Results**: By investigating the characters of the sequencing process, we present a new algorithm for compressing reads in FASTQ files, which can be integrated into various genomic compression tools. We first reviewed the pipeline of reference-based algorithms and identified three key components that heavily impact storage: the matching positions of reads on the reference sequence (refpos), the mismatched positions of bases on reads (mispos) and the matching failed reads (unmapseq). To reduce their sizes, we conducted a detailed analysis of the distribution of matching positions and sequencing errors and then developed the three modules of AMGC. According to the experiment results, AMGC outperformed the current state-of-the-art methods, achieving an 81.23% gain in compression ratio on average compared with the second-best-performing compressor.
 >
 > **Availability**: https://github.com/wj-inf/AMGC
+
+(We will release the source code together with the [AVS](http://www.avs.org.cn/index/index.html) gene compression standard)
 
 
 ## Preparation
@@ -45,6 +47,26 @@ We conducted experiments on ten data, including five Homo sapiens, three Mus mus
 All these test data could be downloaded from [NCBI](https://www.ncbi.nlm.nih.gov/). You can take this [Link](https://trace.ncbi.nlm.nih.gov/Traces/?view=run_browser&acc=SRR4017489&display=download) as an example.
 
 We also offer tiny test data for test: `./testdata/SRR6691666_1_50M.fastq`. The corresponding reference fasta file could be downloaded from [hg38.fa](https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.fa.gz). You need to download it before the test.
+
+## Docker(important)
+
+Since the environment of each machine is different, **we recommend using docker** and testing it with the image we provide. [DockerDir](./docker)
+
+
+
+## Seq Part
+If you want to test the sequence part only, the instructions below could be helpful.
+
+set quality part as one signal value:
+``` terminal
+sed -n '1~4s/^@/>/p;2~4p' ./testdata/SRR6691666_1_50M.fastq > SRR6691666_1_50MA.fasta
+perl ./tools/fasta_to_fastq.pl SRR6691666_1_50MA.fasta > SRR6691666_1_50MB.fastq
+rm -f SRR6691666_1_50MA.fasta
+```
+
+
+
+We still keep the old test information below.
 
 ### Require
 - GCC 7.5.0
@@ -83,15 +105,6 @@ To decompress:
 ./API/AMGC20 -d ./refdata/hg38.fa SRR6691666_1_50M.fastq.arc -o SRR6691666_1_50M_re -t 1
 ```
 
-## Seq Part
-If you want to test the sequence part only, the instructions below could be helpful.
-
-set quality part as one signal value:
-``` terminal
-sed -n '1~4s/^@/>/p;2~4p' ./testdata/SRR6691666_1_50M.fastq > SRR6691666_1_50MA.fasta
-perl ./tools/fasta_to_fastq.pl SRR6691666_1_50MA.fasta > SRR6691666_1_50MB.fastq
-rm -f SRR6691666_1_50MA.fasta
-```
 
 set name part as simple type:
 ``` terminal
