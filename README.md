@@ -50,7 +50,7 @@ We also offer tiny test data for test: `./testdata/SRR6691666_1_50M.fastq`. The 
 
 ## Docker(important)
 
-Since the environment of each machine is different, **we recommend using docker** and testing it with the image we provide. [DockerDir](./docker)
+Since the environment of each machine is different, **we recommend using docker** and testing it with the image we provide. [DockerDir](./Docker/DockerEnv.md)
 
 
 
