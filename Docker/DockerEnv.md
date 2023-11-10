@@ -57,7 +57,7 @@ ps:
 * You can use our OneDrive [env_image_amgc.tar.gz](https://1drv.ms/u/s!AiyNov2MdfiQgVVf1tXkw3VmIa3w?e=e6uq9X) 
 * Use **git lfs clone**
 
-Copy api into data dir:https://1drv.ms/u/s!AiyNov2MdfiQgVVf1tXkw3VmIa3w?e=e6uq9X)
+Copy api into data dir:
 
 ```terminal
 cp /api/AMGC /data && cd /data
