@@ -78,7 +78,7 @@ To decompress:
 
 ## Example
 ``` terminal
-./AMGC -i ./refdata/hg38.fa
+./AMGC -i ./refdata/hg38.fa # (~12min for hg38.fa)
 ./AMGC -c -D 2 ./refdata/hg38.fa -1 ./testdata/SRR6691666_1_50M.fastq -t 1
 ./AMGC -d ./refdata/hg38.fa SRR6691666_1_50M.fastq.arc -o SRR6691666_1_50M_re -t 1
 ```

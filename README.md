@@ -102,7 +102,7 @@ To decompress:
 
 ## Example
 ``` terminal
-./API/AMGC20 -i ./refdata/hg38.fa
+./API/AMGC20 -i ./refdata/hg38.fa # (~12min for hg38.fa)
 ./API/AMGC20 -c -D 2 ./refdata/hg38.fa -1 ./testdata/SRR6691666_1_50M.fastq -t 1
 ./API/AMGC20 -d ./refdata/hg38.fa SRR6691666_1_50M.fastq.arc -o SRR6691666_1_50M_re -t 1
 ```
