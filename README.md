@@ -66,7 +66,7 @@ rm -f SRR6691666_1_50MA.fasta
 
 
 
-We still keep the old test information below.
+We still keep the API we use to run our experiments below. (It's easier to get the program running in our docker environment)
 
 ### Require
 - GCC 7.5.0
@@ -75,7 +75,9 @@ We still keep the old test information below.
 - Boost library
 
 ### Compilation environment
-CPU type: **11th Gen Intel(R) Core(TM) i7-11700F @ 2.50GHz**
+CPU type: **11th Gen Intel(R) Core(TM) i7-11700F @ 2.50GHz** 
+
+(error: "**illegal instruction**" may occur when running in cpu less than 11th generation. Docker environment support 10th generation instead.)
 
 `./API/AMGC18` was compiled in ubuntu18.04.2 (libboost_system.so.1.65.1)
 
@@ -125,7 +127,7 @@ sudo apt-get install zlib1g-dev
 sudo apt-get install -y libboost-filesystem-dev
 ```
 
-If an error is encountered: "**./API/AMGC18 Instruction not found**", you can use "**chmod +x ./API/AMGC18**" to give executable permissions to the file.
+If an error is encountered: "**./API/AMGC20 Instruction not found**", you can use "**chmod +x ./API/AMGC2**0" to give executable permissions to the file.
 
 
 
